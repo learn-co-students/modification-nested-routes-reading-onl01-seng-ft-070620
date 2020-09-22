@@ -4225,3 +4225,98 @@ Processing by AuthorsController#show as HTML
 Completed 200 OK in 395ms (Views: 339.9ms | ActiveRecord: 2.5ms)
 
 
+Started GET "/authors/123547/posts/17/edit" for 127.0.0.1 at 2020-09-22 02:14:56 -0400
+Processing by PostsController#edit as HTML
+  Parameters: {"author_id"=>"123547", "id"=>"17"}
+  [1m[36mPost Load (1.4ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  Rendering posts/edit.html.erb within layouts/application
+  Rendered posts/_form.html.erb (1.8ms)
+  Rendered posts/edit.html.erb within layouts/application (57.0ms)
+Completed 200 OK in 512ms (Views: 408.9ms | ActiveRecord: 11.4ms)
+
+
+Started GET "/authors/123547/posts/17/edit" for 127.0.0.1 at 2020-09-22 02:21:46 -0400
+Processing by PostsController#edit as HTML
+  Parameters: {"author_id"=>"123547", "id"=>"17"}
+  [1m[36mAuthor Load (1.3ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 123547], ["LIMIT", 1]]
+Redirected to http://localhost:3000/authors
+Completed 302 Found in 41ms (ActiveRecord: 4.6ms)
+
+
+Started GET "/authors" for 127.0.0.1 at 2020-09-22 02:21:46 -0400
+Processing by AuthorsController#index as HTML
+  Rendering authors/index.html.erb within layouts/application
+  [1m[36mAuthor Load (1.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  Rendered authors/index.html.erb within layouts/application (8.7ms)
+Completed 200 OK in 384ms (Views: 328.0ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/authors/4/posts" for 127.0.0.1 at 2020-09-22 02:21:56 -0400
+Processing by PostsController#index as HTML
+  Parameters: {"author_id"=>"4"}
+  [1m[36mAuthor Load (1.1ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (1.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."author_id" = ?[0m  [["author_id", 4]]
+  Rendered posts/index.html.erb within layouts/application (35.5ms)
+Completed 200 OK in 469ms (Views: 360.7ms | ActiveRecord: 7.4ms)
+
+
+Started GET "/authors/4/posts/17" for 127.0.0.1 at 2020-09-22 02:22:03 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"author_id"=>"4", "id"=>"17"}
+  [1m[36mAuthor Load (1.8ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mPost Load (2.4ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."author_id" = ? AND "posts"."id" = ? LIMIT ?[0m  [["author_id", 4], ["id", 17], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 385ms (Views: 323.5ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/authors/4/posts/17/edit" for 127.0.0.1 at 2020-09-22 02:22:06 -0400
+Processing by PostsController#edit as HTML
+  Parameters: {"author_id"=>"4", "id"=>"17"}
+  [1m[36mAuthor Load (1.3ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mPost Load (1.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."author_id" = ? AND "posts"."id" = ? LIMIT ?[0m  [["author_id", 4], ["id", 17], ["LIMIT", 1]]
+  Rendering posts/edit.html.erb within layouts/application
+  Rendered posts/_form.html.erb (1.6ms)
+  Rendered posts/edit.html.erb within layouts/application (46.4ms)
+Completed 200 OK in 423ms (Views: 370.4ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2020-09-22 02:31:48 -0400
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  [1m[36mAuthor Load (1.6ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  Rendered posts/_form.html.erb (27.3ms)
+  Rendered posts/new.html.erb within layouts/application (90.9ms)
+Completed 200 OK in 545ms (Views: 481.0ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/authors/4/posts/17" for 127.0.0.1 at 2020-09-22 02:31:54 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"author_id"=>"4", "id"=>"17"}
+  [1m[36mAuthor Load (1.1ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mPost Load (1.9ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."author_id" = ? AND "posts"."id" = ? LIMIT ?[0m  [["author_id", 4], ["id", 17], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 458ms (Views: 389.2ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/authors/4/posts/new" for 127.0.0.1 at 2020-09-22 02:32:03 -0400
+Processing by PostsController#new as HTML
+  Parameters: {"author_id"=>"4"}
+  Rendering posts/new.html.erb within layouts/application
+  [1m[36mAuthor Load (1.4ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered posts/_form.html.erb (4.2ms)
+  Rendered posts/new.html.erb within layouts/application (84.1ms)
+Completed 200 OK in 510ms (Views: 451.4ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2020-09-22 02:32:12 -0400
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  [1m[36mAuthor Load (1.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  Rendered posts/_form.html.erb (3.3ms)
+  Rendered posts/new.html.erb within layouts/application (63.4ms)
+Completed 200 OK in 469ms (Views: 399.4ms | ActiveRecord: 1.2ms)
+
+
